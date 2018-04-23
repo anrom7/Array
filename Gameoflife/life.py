@@ -17,11 +17,11 @@ class LifeGrid:
 
     # Returns the number of rows in the grid.
     def numRows(self):
-        return self._grid.num_rows()
+        pass
 
     # Returns the number of columns in the grid.
     def numCols(self):
-        return self._grid.num_cols()
+        pass
 
     # Configures the grid to contain the given live cells.
     def configure(self, coordList):
@@ -40,11 +40,11 @@ class LifeGrid:
 
     # Clears the indicated cell by setting it to dead.
     def clearCell(self, row, col):
-        self._grid[row, col] = LifeGrid.DEAD_CELL
+        pass
 
     # Sets the indicated cell to be alive.
     def setCell(self, row, col):
-        self._grid[row, col] = LifeGrid.LIVE_CELL
+        pass
 
     # Returns the number of live neighbors for the given cell.
     def eNeighbnumLivors(self, row, col):
