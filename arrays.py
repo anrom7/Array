@@ -34,9 +34,9 @@ class Array :
 
     # Returns the array's iterator for traversing the elements.
     def __iter__( self ):
-        return _ArrayIterator( self. _elements )
+        return _ArrayIterator( self._elements )
 
- # An iterator for the Array ADT.
+# An iterator for the Array ADT.
 class _ArrayIterator :
     def __init__( self, the_array ):
         self._array_ref = the_array
@@ -81,7 +81,7 @@ class Array2D :
 
     # Gets the contents of the element at position [i, j]
     def __getitem__( self, index_tuple ):
-        assert len(index_tuple) == 2, "Invalid number of array subscripts."
+        assert len(index_tuple) == 2,              "Invalid number of array subscripts."
         row = index_tuple[0]
         col = index_tuple[1]
         assert row >= 0 and row < self.num_rows() \
@@ -92,7 +92,7 @@ class Array2D :
 
     # Sets the contents of the element at position [i,j] to value.
     def __setitem__( self, index_tuple, value ):
-        assert len(index_tuple) == 2, "Invalid number of array subscripts."
+        assert len(index_tuple) == 2,              "Invalid number of array subscripts."
         row = index_tuple[0]
         col = index_tuple[1]
         assert row >= 0 and row < self.num_rows() \
@@ -117,7 +117,7 @@ class DynamicArray:
 
     def __getitem__(self, k):
         """Return element at index k."""
-        if not 0 <= k < self. n:
+        if not 0 <= k < self._n:
             raise IndexError( 'invalid index' )
         return self._A[k]                          # retrieve from array
 
@@ -138,16 +138,16 @@ class DynamicArray:
 
     def _make_array(self, c): # nonpublic utitity
         """Return new array with capacity c."""
-        return (c * ctypes.py_object)( )            # see ctypes documentation
+        return (c * ctypes.py_object)( )           # see ctypes documentation
 
     def insert(self, k, value):
         """Insert value at index k, shifting subsequent values rightward."""
         # (for simplicity, we assume 0 <= k <= n in this verion)
-        if self. n == self._capacity: # not enough room
-            self._resize(2 * self._capacity) # so double capacity
-        for j in range(self._n, k, -1): # shift rightmost first
+        if self. n == self._capacity:             # not enough room
+            self._resize(2 * self._capacity)      # so double capacity
+        for j in range(self._n, k, -1):           # shift rightmost first
             self._A[j] = self._A[j - 1]
-        self._A[k] = value # store newest element
+        self._A[k] = value                        # store newest element
         self._n += 1
 
     def remove(self, value):
