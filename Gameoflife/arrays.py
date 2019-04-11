@@ -25,7 +25,7 @@ class Array:
 
     # Puts the value in the array element at index position.
     def __setitem__(self, index, value):
-        assert index >= 0 and index < len(self), "Array subscript out of range"
+        assert 0 <= index < len(self), "Array subscript out of range"
         self._elements[index] = value
 
     # Clears the array by setting each element to the given value.
@@ -137,7 +137,7 @@ class DynamicArray:
         self._capacity = c
 
     @staticmethod
-    def _make_array(c):  # nonpublic utitity
+    def _make_array(c):  # nonpublic utility
         """Return new array with capacity c."""
         return (c * ctypes.py_object)()  # see ctypes documentation
 
