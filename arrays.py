@@ -76,7 +76,7 @@ class Array2D :
 
     # Clears the array by setting every element to the given value.
     def clear( self, value ):
-        for row in range( self.num_rows() ):
+        for row in self.rows:
             row.clear( value )
 
     # Gets the contents of the element at position [i, j]
