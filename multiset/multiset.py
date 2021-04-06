@@ -1,4 +1,4 @@
-from multiset.myarray import MyArray
+from multiset.array_list import MyArray
 
 class Multiset:
     def __init__(self):
