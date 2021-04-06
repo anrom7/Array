@@ -1,4 +1,4 @@
-from multiset.my_multiset import Multiset
+from multiset.multiset import Multiset
 
 data_set = Multiset()
 data_file = open("data.txt", "r")
