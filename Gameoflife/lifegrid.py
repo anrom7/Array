@@ -85,3 +85,18 @@ class LifeGrid:
         :return: 
         """
         pass
+    
+    
+    def __str__(self):
+        """
+        Returns string representation of LifeGrid
+        in form of:
+        DDLDD
+        DLDLD
+        DLDLD
+        DDLDD
+        DDDDD
+        Where D - dead cell, L - live cell
+        """
+        pass
+    
