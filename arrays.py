@@ -143,7 +143,7 @@ class DynamicArray:
     def insert(self, k, value):
         """Insert value at index k, shifting subsequent values rightward."""
         # (for simplicity, we assume 0 <= k <= n in this verion)
-        if self. n == self._capacity:             # not enough room
+        if self._n == self._capacity:             # not enough room
             self._resize(2 * self._capacity)      # so double capacity
         for j in range(self._n, k, -1):           # shift rightmost first
             self._A[j] = self._A[j - 1]
